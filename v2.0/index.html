@@ -8,7 +8,7 @@
     <meta name="apple-touch-fullscreen" content="YES" />
     <script type="text/javascript" src="../lib/zepto.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../lib/common.mobile.css">
-    <title>组件——v1.0</title>
+    <title>组件——v2.0变量</title>
 </head>
 <body>
     <!-- 主 -->
@@ -24,10 +24,20 @@
 
     <script type="text/javascript">
         /**
-         * 说三行就三行，多一行算我输
+         * 自定义内容
          */
+        var data = {
+            name: 'daceyu',
+            content: 'This is a component.',
+            btnColor: '#f00'
+        };
+        // v2.0 变量替换
         $.get('components/test.html', function (htmldata) {
-            $('.j-renderCtn').html(htmldata);
+            var _html = htmldata.replace(/{{(.*)}}/gi, function (matches, m1) {
+                var _m1 = m1.trim();
+                return data[_m1] || ''
+            });
+            $('.j-renderCtn').html(_html);
         });
     </script>
 </body>
