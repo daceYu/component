@@ -1,0 +1,25 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "description": "这里将常用部分抽离开出来通过按需请求实现多页面共用，提升了开发效率，特点：1、重复性，2、关联性，3、有一定“份量”，4、非”首屏”显示。具体说明见博文",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daceYu/component.git"
+  },
+  "author": "daceyu <daceyu@aliyun.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daceYu/component/issues"
+  },
+  "homepage": "https://github.com/daceYu/component#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
